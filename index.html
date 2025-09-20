@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekstil Atık Yönetimi | Sürdürülebilir Çözümler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2a9d8f;
+            --secondary-color: #e9c46a;
+            --accent-color: #f4a261;
+            --dark-color: #264653;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            padding-top: 80px;
+            background-color: #f8f9fa;
+        }
+        
+        .navbar {
+            background-color: var(--dark-color) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--light-color) !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(38, 70, 83, 0.8), rgba(38, 70, 83, 0.8)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1758&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #23857a;
+            border-color: #23857a;
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #e0b85c;
+            border-color: #e0b85c;
+            color: var(--dark-color);
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 5px solid var(--light-color);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-icon {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin: 0 auto 15px;
+        }
+        
+        .pricing-card {
+            text-align: center;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 2px solid var(--primary-color);
+            z-index: 1;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info i {
+            width: 30px;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .content-section {
+            display: none;
+            padding: 40px 0;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        .stats-card {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--dark-color);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: var(--secondary-color);
+        }
+        
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .chatbot-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-btn:hover {
+            background-color: var(--dark-color);
+            transform: scale(1.05);
+        }
+        
+        .chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 350px;
+            height: 450px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .chatbot-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+        }
+        
+        .chatbot-body {
+            flex-grow: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+        }
+        
+        .chatbot-footer {
+            padding: 15px;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .bot-message {
+            background-color: #e9e9eb;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .user-message {
+            background-color: var(--primary-color);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+            margin-left: auto;
+        }
+        
+        .detail-page {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        
+        .language-switcher {
+            margin-right: 15px;
+        }
+        
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .logged-in-user {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" onclick="showSection('hero')">
+                <i class="fas fa-recycle me-2"></i>Tekstil Atık Yönetimi
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('hero')">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('about')">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('solutions')">Çözümler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('problem')">Sorun</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('team')">Takım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('donation')">Bağış</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('faq')">SSS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('contact')">Bize Ulaşın</a>
+                    </li>
+                    <li class="nav-item language-switcher">
+                        <a class="nav-link" href="#" onclick="toggleLanguage()">
+                            <i class="fas fa-globe me-1"></i> EN
+                        </a>
+                    </li>
+                    <li class="nav-item" id="login-nav-item">
+                        <a class="nav-link" href="#" onclick="showSection('user')"><i class="fas fa-user me-1"></i> Giriş Yap</a>
+                    </li>
+                    <li class="nav-item" id="user-nav-item" style="display: none;">
+                        <div class="logged-in-user">
+                            <div class="user-avatar" id="user-avatar">U</div>
+                            <span id="username-display">Kullanıcı</span>
+                            <a href="#" class="nav-link ms-2" onclick="logout()"><i class="fas fa-sign-out-alt"></i></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section content-section active">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-4">Tekstil Atıklarına <span class="text-warning">Akıllı Çözümler</span></h1>
+            <p class="lead mb-4">Sürdürülebilir bir gelecek için tekstil atıklarını azaltma ve yönetme rehberiniz</p>
+            <a href="#" class="btn btn-lg btn-warning me-2" onclick="showSection('solutions')">Çözümleri Keşfet</a>
+            <a href="#" class="btn btn-lg btn-outline-light" onclick="showSection('problem')">Problemi Anla</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 content-section">
+        <div class="container">
+            <h2 class="text-center section-title">Hakkımızda</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Biz Kimiz?</h3>
+                    <p>Tekstil Atık Yönetimi, sürdürülebilir bir gelecek için tekstil atıklarını azaltmak ve doğru şekilde yönetmek amacıyla kurulmuş bir platformdur. Uzman ekibimiz, çevre dostu çözümler sunarak tekstil endüstrisinin daha sürdürülebilir olmasına katkıda bulunmayı hedefliyor.</p>
+                    <p>2015 yılından bu yana, bireyler ve şirketler için tekstil atık yönetimi çözümleri üretiyor, danışmanlık hizmetleri veriyor ve toplumu bu konuda bilinçlendirmek için çalışıyoruz.</p>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Vizyonumuz</h3>
+                    <p>Tekstil atıklarının minimize edildiği, geri dönüşümün standart uygulama haline geldiği ve sürdürülebilir moda anlayışının yaygınlaştığı bir dünya için çalışıyoruz.</p>
+                    <h3>Misyonumuz</h3>
+                    <p>Tekstil atık yönetimi konusunda yenilikçi çözümler sunarak, bireyleri ve kurumları bilinçlendirerek ve atık azaltma süreçlerini kolaylaştırarak çevresel etkiyi azaltmak.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="stats-card card">
+                        <p class="stats-number">8</p>
+                        <p>Yıllık Deneyim</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="stats-card card">
+                        <p class="stats-number">500+</p>
+                        <p>Mutlu Müşteri</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="stats-card card">
+                        <p class="stats-number">95%</p>
+                        <p>Müşteri Memnuniyeti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="py-5 bg-light content-section">
+        <div class="container">
+            <h2 class="text-center section-title">Çözümlerimiz</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary p-3 rounded me-3">
+                                    <i class="fas fa-recycle fa-2x text-white"></i>
+                                </div>
+                                <h4 class="card-title mb-0">Geri Dönüşüm</h4>
+                            </div>
+                            <p class="card-text">Eski tekstil ürünlerini nasıl geri dönüştürebileceğinizi öğrenin. Doğru ayırma teknikleri ve geri dönüşüm merkezleri hakkında bilgi edinin.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="showSolutionDetail('geri-donusum-detay')">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success p-3 rounded me-3">
+                                    <i class="fas fa-pen-fancy fa-2x text-white"></i>
+                                </div>
+                                <h4 class="card-title mb-0">Yeniden Değerlendirme</h4>
+                            </div>
+                            <p class="card-text">Eski kıyafetlerinizi nasıl yeniden kullanabileceğinizi keşfedin. Yaratıcı DIY projeleri ve dönüşüm fikirleri ile atıkları azaltın.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="showSolutionDetail('yeniden-degerlendirme-detay')">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-warning p-3 rounded me-3">
+                                    <i class="fas fa-leaf fa-2x text-dark"></i>
+                                </div>
+                                <h4 class="card-title mb-0">Sürdürülebilir Moda</h4>
+                            </div>
+                            <p class="card-text">Çevre dostu markalar ve alışveriş ipuçları. Organik pamuk, kenevir ve geri dönüştürülmüş malzemelerden yapılmış ürünler hakkında bilgi.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="showSolutionDetail('surdurulebilir-moda-detay')">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-info p-3 rounded me-3">
+                                    <i class="fas fa-shopping-bag fa-2x text-white"></i>
+                                </div>
+                                <h4 class="card-title mb-0">Bilinçli Tüketim</h4>
+                            </div>
+                            <p class="card-text">Daha az ve daha kaliteli alışveriş yapmanın yolları. "Kalite over kantite" felsefesi ile uzun ömürlü giysiler satın almak için ipuçları.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="showSolutionDetail('bilincli-tuketim-detay')">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-danger p-3 rounded me-3">
+                                    <i class="fas fa-industry fa-2x text-white"></i>
+                                </div>
+                                <h4 class="card-title mb-0">Üretici Sorumluluğu</h4>
+                            </div>
+                            <p class="card-text">Şirketlerin tekstil atıklarını azaltmak için neler yapabileceği. Sürdürülebilir üretim teknikleri ve geri alma programları.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="showSolutionDetail('uretici-sorumlulugu-detay')">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-secondary p-3 rounded me-3">
+                                    <i class="fas fa-hands-helping fa-2x text-white"></i>
+                                </div>
+                                <h4 class="card-title mb-0">Bağış ve Takas</h4>
+                            </div>
+                            <p class="card-text">Kullanılmayan giysileri bağışlamak veya takas etmek için en iyi yollar. Yerel bağış merkezleri ve giysi takas etkinlikleri hakkında bilgi.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" onclick="showSolutionDetail('bagis-takas-detay')">Detaylı Bilgi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution Details -->
+            <div id="geri-donusum-detay" class="detail-page">
+                <h3>Geri Dönüşüm Detayları</h3>
+                <p>Tekstil geri dönüşümü, atık tekstil ürünlerinin toplanması, işlenmesi và yeniden kullanıma kazandırılması sürecidir. İşte tekstil geri dönüşümü hakkında detaylı bilgiler:</p>
+                <h5>Nasıl Yapılır?</h5>
+                <ul>
+                    <li>Tekstil atıklarını diğer atıklardan ayrı toplayın</li>
+                    <li>Yırtık veya hasarlı giysileri onarın veya farklı amaçlarla kullanın</li>
+                    <li>Geri dönüşüm merkezlerine uygun şekilde teslim edin</li>
+                    <li>Doğal ve sentetik lifleri ayrıştırın</li>
+                </ul>
+                <h5>Faydaları</h5>
+                <ul>
+                    <li>Doğal kaynakların korunmasına yardımcı olur</li>
+                    <li>Enerji tasarrufu sağlar</li>
+                    <li>Atık miktarını azaltır</li>
+                    <li>Ekonomiye katkı sağlar</li>
+                </ul>
+                <button class="btn btn-secondary mt-3" onclick="hideSolutionDetail()">Geri Dön</button>
+            </div>
+
+            <div id="yeniden-degerlendirme-detay" class="detail-page">
+                <h3>Yeniden Değerlendirme Detayları</h3>
+                <p>Yeniden değerlendirme, atık malzemeleri alıp onları daha yüksek kaliteli veya daha iyi çevresel değere sahip ürünlere dönüştürme sürecidir.</p>
+                <h5>Yeniden Değerlendirme Fikirleri</h5>
+                <ul>
+                    <li>Eski tişörtlerden bez çantalar yapmak</li>
+                    <li>Kot pantolonlardan yastık kılıfları oluşturmak</li>
+                    <li>Yıpranmış havlu ve bornozları temizlik bezine dönüştürmek</li>
+                    <li>Eski kazaklardan eldiven và bereler yapmak</li>
+                    <li>Kumaş parçalarını birleştirip yorgan veya battaniye yapmak</li>
+                </ul>
+                <button class="btn btn-secondary mt-3" onclick="hideSolutionDetail()">Geri Dön</button>
+            </div>
+
+            <!-- Diğer çözüm detayları buraya eklenecek -->
+
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-5 content-section">
+        <div class="container">
+            <h2 class="text-center section-title">Tekstil Atık Sorunu</h2>
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <p class="lead">Tekstil atıkları, dünyadaki en büyük çevre sorunlarından biridir. Her yıl milyonlarca ton giysi và tekstil ürünü çöplüklere gönderiliyor.</p>
+                    <p>Hızlı moda tüketimi, tekstil atıklarının en büyük nedenidir. Üretim süreçlerinde kullanılan kimyasallar và su kirliliği de ek çevresel sorunlar yaratmaktadır.</p>
+                    <div class="accordion mt-4" id="problemAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#problemOne">
+                                    <i class="fas fa-exclamation-triangle me-2 text-danger"></i> Hızlı Moda Etkisi
+                                </button>
+                            </h2>
+                            <div id="problemOne" class="accordion-collapse collapse show" data-bs-parent="#problemAccordion">
+                                <div class="accordion-body">
+                                    Hızlı moda, giysilerin çok düşük fiyatlarla üretilip hızla tüketilmesine neden oluyor. Bu da tekstil atıklarının her yıl %8-10 artmasına yol açıyor. Her saniye bir kamyon dolusu tekstil atığı çöplüklere atılıyor.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#problemTwo">
+                                    <i class="fas fa-tint me-2 text-primary"></i> Su Kirliliği
+                                </button>
+                            </h2>
+                            <div id="problemTwo" class="accordion-collapse collapse" data-bs-parent="#problemAccordion">
+                                <div class="accordion-body">
+                                    Tekstil endüstrisi, dünyadaki endüstriyel su kirliliğinin %20'sinden sorumludur. Pamuk üretimi và boyama işlemleri büyük miktarda temiz suyu kirletmektedir. Sadece bir tişört üretmek için 2.700 litre su harcanmaktadır.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#problemThree">
+                                    <i class="fas fa-gas-pump me-2 text-warning"></i> Karbon Ayak İzi
+                                </button>
+                            </h2>
+                            <div id="problemThree" class="accordion-collapse collapse" data-bs-parent="#problemAccordion">
+                                <div class="accordion-body">
+                                    Tekstil sektörü, küresel karbon emisyonlarının %10'unu oluşturuyor. Bu, uluslararası uçuşlar và deniz taşımacılığının toplamından daha fazladır. Her yıl 1.2 milyar ton karbon emisyonuna neden olmaktadır.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#problemFour">
+                                    <i class="fas fa-landmark me-2 text-success"></i> Atık Depolama Sorunu
+                                </button>
+                            </h2>
+                            <div id="problemFour" class="accordion-collapse collapse" data-bs-parent="#problemAccordion">
+                                <div class="accordion-body">
+                                    Tekstil atıkları, katı atık depolama alanlarının %5'ini oluşturuyor. Sentetik lifler doğada 200 yıldan fazla çözünmeden kalabilir và mikroplastic kirliliğine neden olur.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-6 mb-4">
+                            <div class="stats-card card">
+                                <p class="stats-number">92 Milyon</p>
+                                <p>Yıllık Tekstil Atığı (ton)</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-card card">
+                                <p class="stats-number">%60</p>
+                                <p>Sentetik Malzeme Oranı</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-card card">
+                                <p class="stats-number">10.000</p>
+                                <p>Litrelik Su/Ton Pamuk</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-card card">
+                                <p class="stats-number">%85</p>
+                                <p>Çöpe Giden Tekstiller</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-card card">
+                                <p class="stats-number">20%</p>
+                                <p>Küresel Su Kirliliği</p>
+                            </div>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-card card">
+                                <p class="stats-number">1.2 Milyar</p>
+                                <p>Ton Yıllık Karbon Emisyonu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-5 bg-light content-section">
+        <div class="container">
+            <h2 class="text-center section-title">Ekibimiz</h2>
+            <p class="text-center mb-5">Alanında uzman ekibimizle tekstil atık yönetimi konusunda çözümler sunuyoruz.</p>
+            <div class="row">
+                <div class="col-md-4 team-member">
+                    <div class="team-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Zeynep Sıla Erdoğan</h4>
+                    <p class="text-primary">Kurucu & CEO</p>
+                    <p>15 yılı aşkın süredir çevre mühendisliği ve sürdürülebilirlik alanında çalışmaktadır.</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <div class="team-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Belinay Ekinci</h4>
+                    <p class="text-primary">Teknik Direktör</p>
+                    <p>Tekstil geri dönüşüm teknolojileri ve inovasyon konularında uzmanlaşmıştır.</p>
+                </div>
+                <div class="col-md-4 team-member">
+                    <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1196&q=80" alt="Elvin Tuğsem Çetinkaya">
+                    <h4>Elvin Tuğsem Çetinkaya</h4>
+                    <p class="text-primary">AR-GE Uzmanı</p>
+                    <p>Yeni nesil geri dönüşüm teknolojileri ve malzeme bilimi üzerine çalışmaktadır.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4 team-member">
+                    <div class="team-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h4>Meriç Tuna Demir</h4>
+                    <p class="text-primary">Pazarlama Müdürü</p>
+                    <p>Pazarlama stratejileri ve müşteri ilişkileri yönetimi konusunda deneyimlidir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section id="donation" class="py-5 content-section">
+        <div class="container">
+            <h2 class="text-center section-title">Bağış Yapın</h2>
+            <p class="text-center mb-5">Yaptığınız bağışlar, tekstil atıklarının toplanması ve geri dönüştürülmesi çalışmalarımıza destek olacaktır.</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="bg-primary p-3 rounded-circle d-inline-flex mb-3">
+                                <i class="fas fa-tshirt fa-3x text-white"></i>
+                            </div>
+                            <h4>Tekstil Bağışı</h4>
+                            <p>Kullanmadığınız tekstil ürünlerini bağışlayarak atık oluşumunu engelleyin và ihtiyaç sahiplerine destek olun.</p>
+                            <div class="mt-4">
+                                <h5>Nasıl Yapılır?</h5>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check text-success me-2"></i> Temiz ve kullanılabilir durumdaki giysileri ayırın</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> En yakın bağış noktamıza getirin</li>
+                                    <li><i class="fas fa-check text-success me-2"></i> Veya evinizden alınmasını sağlayın</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3">Bağış Noktalarını Gör</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="bg-success p-3 rounded-circle d-inline-flex mb-3">
+                                <i class="fas fa-donate fa-3x text-white"></i>
+                            </div>
+                            <h4>Maddi Bağış</h4>
+                            <p>Maddi bağışlarınız, tekstil atıklarının toplanması, ayrıştırılması ve geri dönüştürülmesi çalışmalarımızı destekleyecektır.</p>
+                            <div class="mt-4">
+                                <h5>Bağış Seçenekleri</h5>
+                                <div class="row mt-3">
+                                    <div class="col-4">
+                                        <button class="btn btn-outline-primary w-100 mb-2">₺50</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-outline-primary w-100 mb-2">₺100</button>
+                                    </div>
+                                    <div class="col-4">
+                                        <button class="btn btn-outline-primary w-100 mb-2">₺250</button>
+                                    </div>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <input type="number" class="form-control" placeholder="Özel Miktar">
+                                    <span class="input-group-text">₺</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-success mt-3">Bağış Yap</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light content-section">
+        <div class="container">
+            <h2 class="text-center section-title">Sıkça Sorulan Sorular</h2>
+            <p class="text-center mb-5">Tekstil atık yönetimi hakkında merak ettikleriniz</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <h4>Tekstil atıklarını nasıl azaltabilirim?</h4>
+                        <p>Tekstil atıklarını azaltmak için kaliteli ve dayanıklı giysiler satın alabilir, ikinci el alışveriş yapabilir, giysilerinizi tamir ederek ömürlerini uzatabilir ve kullanmadığınız giysileri bağışlayabilir veya takas edebilirsiniz.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Hangi tekstil ürünleri geri dönüştürülebilir?</h4>
+                        <p>Pamuk, yün, ipek, keten gibi doğal lifler ve polyester, naylon, akrilik gibi sentetik lifler geri dönüştürülebilir. Ancak karışık kumaşların geri dönüşümü daha zordur.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Tekstil atıklarının çevreye etkileri nelerdir?</h4>
+                        <p>Tekstil atıkları su kirliliği, toprak kirliliği ve hava kirliliğine neden olur. Ayrıca sentetik lifler doğada çözünmeden yüzlerce yıl kalabilir ve mikroplastic kirliliğine yol açar.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Şirketim için tekstil atık yönetimi programı nasıl oluşturabilirim?</h4>
+                        <p>Şirketiniz için atık değerlendirmesi yaparak başlayabilir, çalışan eğitimleri düzenleyebilir, geri dönüşüm programları oluşturabilir ve sürdürülebilir tedarikçilerle çalışabilirsiniz. Profesyonel destek almak için bizimle iletişime geçebilirsiniz.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Tekstil geri dönüşümü için nereye başvurabilirim?</h4>
+                        <p>Yerel belediyenizin geri dönüşüm programlarını kontrol edebilir, tekstil geri dönüşüm firmalarıyla iletişime geçebilir veya mağazaların giysi toplama kutularını kullanabilirsiniz.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Tekstil atıklarından ne tür ürünler yapılabilir?</h4>
+                        <p>Tekstil atıklarından temizlik bezi, izolasyon malzemesi, dolgu malzemesi, yeni kumaşlar ve hatta mobilya dolgu malzemeleri yapılabilir.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Hangi tekstil ürünleri geri dönüştürülemez?</h4>
+                        <p>Islanınca zararlı kimyasallar salan, boya içeren veya tehlikeli maddelerle kontamine olmuş tekstil ürünleri geri dönüştürülemez. Ayrıca iç çamaşırı ve çoraplar da hijyen nedenleriyle genellikle geri dönüştürülmez.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Tekstil atıklarını evde nasıl değerlendirebilirim?</h4>
+                        <p>Eski tişörtlerden bez çantalar, kumaş parçalarından yastık kılıfları veya patchwork ürünler, eski havlu ve bornozlardan temizlik bezleri yapabilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 content-section">
+        <div class="container">
+            <h2 class="text-center section-title">Bize Ulaşın</h2>
+            <p class="text-center mb-5">Sorularınız ve destek için iletişime geçin</p>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contact-info">
+                        <h4>İletişim Bilgileri</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Çevre Sokak No:24, Şişli/İstanbul</p>
+                        <p><i class="fas fa-phone"></i> 0212 345 67 89</p>
+                        <p><i class="fas fa-envelope"></i> info@tekstilatik.com</p>
+                        <p><i class="fas fa-clock"></i> Pazartesi - Cuma: 09:00 - 18:00</p>
+                    </div>
+                    <div class="mt-4">
+                        <h4>Bizi Takip Edin</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Adınız</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">E-posta</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Konu</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Mesajınız</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Gönder</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Section -->
+    <section id="user" class="py-5 content-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-center mb-4">Giriş Yap / Kayıt Ol</h3>
+                            <ul class="nav nav-tabs" id="userTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab">Giriş Yap</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab">Kayıt Ol</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content p-3" id="userTabsContent">
+                                <div class="tab-pane fade show active" id="login" role="tabpanel">
+                                    <form id="loginForm">
+                                        <div class="mb-3">
+                                            <label for="loginEmail" class="form-label">E-posta</label>
+                                            <input type="email" class="form-control" id="loginEmail" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="loginPassword" class="form-label">Şifre</label>
+                                            <input type="password" class="form-control" id="loginPassword" required>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">Beni hatırla</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+                                        <div class="text-center mt-3">
+                                            <a href="#">Şifremi unuttum</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="register" role="tabpanel">
+                                    <form id="registerForm">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="firstName" class="form-label">Ad</label>
+                                                <input type="text" class="form-control" id="firstName" required>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="lastName" class="form-label">Soyad</label>
+                                                <input type="text" class="form-control" id="lastName" required>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="registerEmail" class="form-label">E-posta</label>
+                                            <input type="email" class="form-control" id="registerEmail" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="registerPassword" class="form-label">Şifre</label>
+                                            <input type="password" class="form-control" id="registerPassword" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="confirmPassword" class="form-label">Şifre Tekrar</label>
+                                            <input type="password" class="form-control" id="confirmPassword" required>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="acceptTerms">
+                                            <label class="form-check-label" for="acceptTerms">Kullanım koşullarını kabul ediyorum</label>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary w-100">Kayıt Ol</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Tekstil Atık Yönetimi</h5>
+                    <p>Sürdürülebilir bir gelecek için birlikte çalışalım. Tekstil atıklarını azaltmak ve doğru yönetmek için kaynak ve çözümler sunuyoruz.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="showSection('hero')">Ana Sayfa</a></li>
+                        <li><a href="#" onclick="showSection('about')">Hakkımızda</a></li>
+                        <li><a href="#" onclick="showSection('solutions')">Çözümler</a></li>
+                        <li><a href="#" onclick="showSection('problem')">Sorun</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Kaynaklar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" onclick="showSection('team')">Takım</a></li>
+                        <li><a href="#" onclick="showSection('donation')">Bağış</a></li>
+                        <li><a href="#" onclick="showSection('faq')">SSS</a></li>
+                        <li><a href="#" onclick="showSection('contact')">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Bülten</h5>
+                    <p>Yeniliklerden haberdar olmak için bültenimize abone olun.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="E-posta adresiniz">
+                        <button class="btn btn-primary" type="button">Abone Ol</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-0">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Tekstil Atık Yönetimi. Tüm Hakları Saklıdır.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Gizlilik Politikası</a>
+                    <a href="#" class="text-white">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-btn" id="chatbotButton">
+            <i class="fas fa-robot fa-2x"></i>
+        </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header d-flex justify-content-between align-items-center">
+                <span>Tekstil Atık Asistanı</span>
+                <button class="btn btn-sm btn-light" id="closeChatbot">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-body d-flex flex-column" id="chatbotMessages">
+                <div class="message bot-message">
+                    Merhaba! Ben Tekstil Atık Asistanı. Size tekstil atıkları, geri dönüşüm ve sürdürülebilir moda hakkında nasıl yardımcı olabilirim?
+                </div>
+            </div>
+            <div class="chatbot-footer">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Mesajınızı yazın..." id="chatbotInput">
+                    <button class="btn btn-primary" type="button" id="sendMessage">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Section management
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Hide all solution details
+            document.querySelectorAll('.detail-page').forEach(detail => {
+                detail.style.display = 'none';
+            });
+            
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+        
+        // Solution detail management
+        function showSolutionDetail(detailId) {
+            // Hide all solution details
+            document.querySelectorAll('.detail-page').forEach(detail => {
+                detail.style.display = 'none';
+            });
+            
+            // Show the selected detail
+            document.getElementById(detailId).style.display = 'block';
+            
+            // Scroll to detail
+            document.getElementById(detailId).scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function hideSolutionDetail() {
+            // Hide all solution details
+            document.querySelectorAll('.detail-page').forEach(detail => {
+                detail.style.display = 'none';
+            });
+        }
+        
+        // Contact form handling
+        document.querySelector('#contact form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Mesajınız başarıyla gönderildi. En kısa sürede sizinle iletişime geçeceğiz.');
+            this.reset();
+        });
+        
+        // User management
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            
+            // Simple validation
+            if (email && password) {
+                // Check if user exists
+                const users = JSON.parse(localStorage.getItem('users') || '[]');
+                const user = users.find(u => u.email === email && u.password === password);
+                
+                if (user) {
+                    // Login successful
+                    localStorage.setItem('currentUser', JSON.stringify(user));
+                    updateUserUI(user);
+                    alert('Giriş başarılı! Hoş geldiniz ' + user.firstName + ' ' + user.lastName);
+                    showSection('hero');
+                } else {
+                    alert('E-posta veya şifre hatalı.');
+                }
+            } else {
+                alert('Lütfen tüm alanları doldurun.');
+            }
+        });
+        
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('registerEmail').value;
+            const password = document.getElementById('registerPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const acceptTerms = document.getElementById('acceptTerms').checked;
+            
+            // Simple validation
+            if (!firstName || !lastName || !email || !password || !confirmPassword) {
+                alert('Lütfen tüm alanları doldurun.');
+                return;
+            }
+            
+            if (password !== confirmPassword) {
+                alert('Şifreler eşleşmiyor.');
+                return;
+            }
+            
+            if (!acceptTerms) {
+                alert('Lütfen kullanım koşullarını kabul edin.');
+                return;
+            }
+            
+            // Save user
+            const users = JSON.parse(localStorage.getItem('users') || '[]');
+            
+            // Check if user already exists
+            if (users.find(u => u.email === email)) {
+                alert('Bu e-posta adresi zaten kayıtlı.');
+                return;
+            }
+            
+            const newUser = {
+                firstName,
+                lastName,
+                email,
+                password
+            };
+            
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+            localStorage.setItem('currentUser', JSON.stringify(newUser));
+            
+            updateUserUI(newUser);
+            alert('Kayıt başarılı! Hoş geldiniz ' + firstName + ' ' + lastName);
+            showSection('hero');
+        });
+        
+        function updateUserUI(user) {
+            if (user) {
+                document.getElementById('login-nav-item').style.display = 'none';
+                document.getElementById('user-nav-item').style.display = 'block';
+                document.getElementById('username-display').textContent = user.firstName + ' ' + user.lastName;
+                document.getElementById('user-avatar').textContent = user.firstName.charAt(0) + user.lastName.charAt(0);
+            } else {
+                document.getElementById('login-nav-item').style.display = 'block';
+                document.getElementById('user-nav-item').style.display = 'none';
+            }
+        }
+        
+        function logout() {
+            localStorage.removeItem('currentUser');
+            updateUserUI(null);
+            alert('Çıkış yapıldı.');
+        }
+        
+        // Check if user is logged in on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser') || 'null');
+            updateUserUI(currentUser);
+            
+            // Chatbot functionality
+            const chatbotButton = document.getElementById('chatbotButton');
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            const closeChatbot = document.getElementById('closeChatbot');
+            const sendMessageButton = document.getElementById('sendMessage');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            
+            chatbotButton.addEventListener('click', function() {
+                chatbotWindow.style.display = 'flex';
+            });
+            
+            closeChatbot.addEventListener('click', function() {
+                chatbotWindow.style.display = 'none';
+            });
+            
+            function addMessage(message, isUser) {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('message');
+                messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
+                messageDiv.textContent = message;
+                chatbotMessages.appendChild(messageDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+            
+            function getBotResponse(userMessage) {
+                userMessage = userMessage.toLowerCase();
+                
+                if (userMessage.includes('geri dönüşüm') || userMessage.includes('nasıl geri dönüştürebilirim')) {
+                    return "Tekstil ürünlerini geri dönüştürmek için öncelikle yerel belediyenizin geri dönüşüm programını kontrol edin. Ayrıca H&M, Zara gibi mağazaların giysi toplama programlarından yararlanabilirsiniz.";
+                } else if (userMessage.includes('sürdürülebilir moda') || userMessage.includes('çevre dostu marka')) {
+                    return "Sürdürülebilir moda için organik pamuk, kenevir, bambu gibi doğal liflerden yapılmış ürünleri tercih edebilirsiniz. Ayrıca second-hand alışveriş yaparak da tekstil ayak izinizi azaltabilirsiniz.";
+                } else if (userMessage.includes('atık azaltma') || userMessage.includes('nasıl azaltabilirim')) {
+                    return "Tekstil atıklarını azaltmak için: 1) Kaliteli ve dayanıklı giysiler satın alın, 2) Giysilerinizi tamir edin, 3) İkinci el alışveriş yapın, 4) Kullanmadığınız giysileri bağışlayın veya takas edin.";
+                } else if (userMessage.includes('merhaba') || userMessage.includes('selam')) {
+                    return "Merhaba! Tekstil atık yönetimi hakkında size nasıl yardımcı olabilirim?";
+                } else if (userMessage.includes('teşekkür') || userMessage.includes('sağ ol')) {
+                    return "Rica ederim! Başka bir konuda daha yardımcı olabilirim?";
+                } else if (userMessage.includes('bağış') || userMessage.includes('bağış yapmak')) {
+                    return "Bağış yapmak için web sitemizin 'Bağış' bölümünü ziyaret edebilirsiniz. Hem tekstil hem de maddi bağış seçeneklerimiz bulunmaktadır.";
+                } else {
+                    return "Üzgünüm, bu konuda yeterli bilgim yok. Ancak tekstil atık yönetimi, geri dönüşüm veya sürdürülebilir moda hakkında sorularınızı yanıtlayabilirim.";
+                }
+            }
+            
+            sendMessageButton.addEventListener('click', function() {
+                const userMessage = chatbotInput.value.trim();
+                if (userMessage !== '') {
+                    addMessage(userMessage, true);
+                    chatbotInput.value = '';
+                    
+                    // Simulate bot thinking
+                    setTimeout(function() {
+                        const botResponse = getBotResponse(userMessage);
+                        addMessage(botResponse, false);
+                    }, 1000);
+                }
+            });
+            
+            chatbotInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendMessageButton.click();
+                }
+            });
+        });
+        
+        // Language switcher
+        function toggleLanguage() {
+            const currentLang = document.documentElement.lang;
+            if (currentLang === 'tr') {
+                document.documentElement.lang = 'en';
+                document.querySelector('.language-switcher a').innerHTML = '<i class="fas fa-globe me-1"></i> TR';
+                alert('Language switched to English. This is a demo - full translation would be implemented in a real application.');
+            } else {
+                document.documentElement.lang = 'tr';
+                document.querySelector('.language-switcher a').innerHTML = '<i class="fas fa-globe me-1"></i> EN';
+                alert('Dil Türkçe olarak değiştirildi. Bu bir demo - gerçek uygulamada tam çeviri uygulanır.');
+            }
+        }
+    </script>
+</body>
+</html>
